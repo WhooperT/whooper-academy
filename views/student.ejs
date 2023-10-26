@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<!-- Coding By CodingNepal - codingnepalweb.com -->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images\Group.png" type="image/gif" />
+
+    <!----======== CSS ======== -->
+
+
+    <!----===== Iconscout CSS ===== -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/habibmhamadi/multi-select-tag/dist/css/multi-select-tag.css">
+
+    <title>Whooper Academy</title>
+    <style>
+        /* ===== Google Font Import - Poppins ===== */
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+
+            display: flex;
+            align-items: center;
+            background: url("images/starry-sky-2675322_1280.jpg");
+            background-size: 100% 100%;
+            justify-content: center;
+
+
+        }
+
+        .cont {
+            display: flex;
+
+            margin: 6%;
+            box-shadow: 0px 0px 73px 10px #0061a7;
+        }
+
+
+
+
+        .c2 {
+            width: 100%;
+
+        }
+
+        .c1 {
+            width: 43%;
+            background: #121212;
+        }
+
+        .c1grap video {
+            width: 194%;
+            margin-top: 70%;
+        }
+
+        .c1 img {
+            position: absolute;
+            width: 166px;
+            margin-left: 8%;
+            margin-top: 4%;
+        }
+
+        .himg {
+            background: #242424;
+        }
+
+        .himg img {
+            width: 400px;
+            padding-left: 18px;
+            padding-top: 14px;
+        }
+
+        header {
+
+            font-size: 25px;
+            font-weight: 600;
+            color: white;
+            padding-left: 23px;
+            background: #242424;
+            padding-top: 17px;
+        }
+
+        header::before {
+            content: "";
+
+            left: 0;
+            bottom: -2px;
+            height: 3px;
+            width: 27px;
+            border-radius: 8px;
+            background-color: #4070f4;
+        }
+
+        form {
+            position: relative;
+
+            min-height: 595px;
+            background-color: #242424;
+            overflow: hidden;
+            padding: 22px;
+        }
+
+        form .form {
+
+            background-color: #242424;
+            transition: 0.3s ease;
+        }
+
+        form .form.second {
+            opacity: 0;
+            pointer-events: none;
+            transform: translateX(100%);
+        }
+
+        form.secActive .form.second {
+            opacity: 1;
+            pointer-events: auto;
+            transform: translateX(0);
+        }
+
+        form.secActive .form.first {
+            opacity: 0;
+            pointer-events: none;
+            transform: translateX(-100%);
+        }
+
+        form .title {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 16px;
+            font-weight: 500;
+            margin: 6px 0;
+            color: white;
+        }
+
+        form .fields {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            padding-top: 65px;
+        }
+
+        form .fields .input-field {
+            display: flex;
+            width: calc(100% / 3 - 15px);
+            flex-direction: column;
+            margin: 4px 0;
+        }
+
+        form .fields .gender-category {
+            display: flex;
+            width: calc(100% / 3 - 15px);
+            flex-direction: row;
+            margin: 4px 0;
+        }
+
+        .input-field label {
+            font-size: 12px;
+            font-weight: 500;
+            color: #ffffff;
+        }
+
+        .gender-category label {
+            font-size: 15px;
+            font-weight: 500;
+            color: #ffffff;
+            padding: -8px;
+            margin: 6px;
+        }
+
+        .input-field input,
+        select {
+            outline: none;
+            font-size: 14px;
+            font-weight: 400;
+            color: rgb(255, 255, 255);
+            border-radius: 5px;
+            border: 1px solid #b208cd;
+            padding: 0 15px;
+            height: 42px;
+            margin: 8px 0;
+            background: #70707000;
+        }
+
+        .input-field input :focus,
+        .input-field select:focus {
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.13);
+        }
+
+        .input-field select,
+        .input-field input[type="date"] {
+            color: #707070;
+        }
+
+        .input-field input[type="date"]:valid {
+            color: white;
+        }
+
+        form button,
+        .backBtn {
+            position: absolute;
+            align-items: center;
+            justify-content: center;
+            height: 45px;
+            max-width: 119px;
+            width: 100%;
+            border: 1px solid purple;
+            outline: none;
+            color: #fff;
+            border-radius: 9px;
+            margin-top: 51%;
+            background-color: black;
+            transition: all 0.3s linear;
+            cursor: pointer;
+            margin-left: 75%;
+        }
+
+
+        form .btnText {
+            font-size: 14px;
+            font-weight: 400;
+        }
+
+        form button:hover {
+            background-color: #0838b1;
+        }
+
+        form button i,
+        form .backBtn i {
+            margin: 0 6px;
+        }
+
+        form .backBtn i {
+            transform: rotate(180deg);
+        }
+
+        form .buttons {
+            display: flex;
+            align-items: center;
+        }
+
+        form .buttons button,
+        .backBtn {
+            margin-right: 14px;
+        }
+
+        .mult-select-tag {
+            display: flex;
+            width: 100%;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+            --tw-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+            --tw-shadow-color: 0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);
+            --border-color: rgb(218, 221, 224);
+            font-family: Verdana, sans-serif;
+            margin-left: -36%;
+            height: 23px;
+        }
+
+        .mult-select-tag .wrapper {
+            width: 29%;
+        }
+
+        .mult-select-tag .body {
+            display: flex;
+            border: 1px solid rgb(148, 18, 168);
+            background: rgba(255, 255, 255, 0);
+            min-height: 42px;
+            width: 100%;
+            min-width: 23rem;
+            margin-left: -18.5rem;
+
+        }
+
+        .mult-select-tag .input-container {
+            display: flex;
+            flex-wrap: wrap;
+            flex: 1 1 auto;
+            padding: 0.1rem;
+        }
+
+        .mult-select-tag .input-body {
+            display: flex;
+            width: 100%;
+        }
+
+        .mult-select-tag .input {
+            flex: 1;
+            background: transparent;
+            border-radius: 0.25rem;
+            padding: 0.45rem;
+            margin: 10px;
+            color: #2d3748;
+            outline: 0;
+            border: 1px solid var(--border-color);
+        }
+
+        .mult-select-tag .btn-container {
+            color: #e2ebf000;
+            padding: 0.5rem;
+            display: flex;
+            border-left: 1px solid var(--border-color);
+            width: 66px;
+        }
+
+        .mult-select-tag button {
+            cursor: pointer;
+            width: 100%;
+            color: #718096;
+            outline: 0;
+            height: 100%;
+            border: none;
+            padding: 0;
+            background: transparent;
+            background-image: none;
+
+            text-transform: none;
+            margin: 0;
+        }
+
+        .mult-select-tag button:first-child {
+            width: 4rem;
+            height: 130%;
+            margin-left: -3%;
+        }
+
+
+        .mult-select-tag .drawer {
+            position: absolute;
+            background: white;
+            max-height: 15rem;
+            z-index: 40;
+            top: 98%;
+            width: 100%;
+            overflow-y: scroll;
+            border: 1px solid var(--border-color);
+            border-radius: 0.25rem;
+            margin-left: -143%;
+        }
+
+        .mult-select-tag ul {
+            list-style-type: none;
+            padding: 0.5rem;
+            margin: 0;
+        }
+
+        .lab {
+            margin-bottom: 7px;
+            margin-left: -108%;
+        }
+
+
+        .mult-select-tag ul li {
+            padding: 0.5rem;
+            border-radius: 0.25rem;
+            cursor: pointer;
+        }
+
+        .mult-select-tag ul li:hover {
+            background: rgb(243 244 246);
+        }
+
+        .mult-select-tag .item-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #ffffff;
+            padding: 0.2rem 0.4rem;
+            margin: 0.2rem;
+            font-weight: 500;
+            border: 1px solid #9e23cf;
+            background: #090909;
+            border-radius: 9999px;
+        }
+
+        .mult-select-tag .item-label {
+            max-width: 100%;
+            line-height: 1;
+            font-size: 0.75rem;
+            font-weight: 400;
+            flex: 0 1 auto;
+            color: #ffffff;
+        }
+
+        .mult-select-tag .item-close-container {
+            display: flex;
+            flex: 1 1 auto;
+            flex-direction: row-reverse;
+        }
+
+        .mult-select-tag .item-close-svg {
+            width: 1rem;
+            margin-left: 0.5rem;
+            height: 1rem;
+            cursor: pointer;
+            border-radius: 9999px;
+            display: block;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .mult-select-tag .shadow {
+            box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+        }
+
+        .mult-select-tag .rounded {
+            border-radius: .375rem;
+        }
+
+        @media (max-width: 750px) {
+            form {
+                overflow-y: scroll;
+                padding-bottom: 179px;
+            }
+
+            .mult-select-tag .drawer {
+
+                margin-left: 72%;
+            }
+
+            .mult-select-tag .body {
+                display: flex;
+                border: 1px solid rgb(148, 18, 168);
+                background: rgba(255, 255, 255, 0);
+                min-height: 48px;
+                width: 100%;
+                min-width: 21rem;
+                margin-left: 0%;
+            }
+
+            .lab {
+                margin-left: 0%;
+            }
+
+            form .fields .gender-category {
+                padding-top: 13px;
+            }
+
+            .gender-category label {
+                font-size: 18px;
+                font-weight: 500;
+                color: #ffffff;
+                padding: 7px;
+                margin: 0;
+            }
+
+            .c1 {
+                display: none;
+            }
+
+            form .fields {
+                padding: 0%;
+            }
+
+            form button {
+                height: 32px;
+                max-width: 93px;
+                width: 64%;
+                margin-top: 279%;
+                margin-left: -1%;
+                padding-bottom: 1px;
+            }
+
+
+            form::-webkit-scrollbar {
+                display: none;
+            }
+
+            form .fields .input-field {
+                width: calc(100% / 2 - 15px);
+                padding-top: 32px;
+                margin: 4px;
+                display: flex;
+
+            }
+        }
+
+        @media (max-width: 550px) {
+            form .fields .input-field {
+                width: 100%;
+                
+            }
+            .himg img {
+    width: 338px;
+    padding-left: 25px;
+    padding-top: 14px;
+}
+        }
+    </style>
+</head>
+
+<body>
+    <div class="cont">
+        <div class="c1">
+            <div class="c1img">
+                <img src="images/Whooper Academy W text copy.webp" width="20px">
+            </div>
+
+
+            <div class="c1grap">
+
+                <video src="images/Form BG.webm" loop autoplay muted></video>
+            </div>
+        </div>
+        <div class="c2">
+            <div class="himg">
+                <img src="images/Whooper Academy.png">
+            </div>
+            <header>
+                <p>In Association with <%=storedData.School%>,<%=storedData.city%>
+                </p>
+
+            </header>
+
+            <form action="/student" method="post">
+                <div class="form first">
+                    <div class="details personal">
+                        <span style="color: #1499c5; font-size: 20PX;" class="title">THE FUTURE OF AI IS NOW!</span><BR>
+                        <span class="title">Step Into Your Future With Whooper Academy!</span>
+
+
+                        <div class="fields">
+                            <div class="input-field">
+                                <label>First Name</label>
+                                <input type="text" placeholder="Enter your name" name="firstname">
+                            </div>
+                            <div class="input-field">
+                                <label>Last Name</label>
+                                <input type="text" placeholder="Enter your Last Name" name="lastname">
+                            </div>
+
+                            <div class="input-field">
+                                <label>Date of Birth</label>
+                                <input type="date" placeholder="Enter birth date" name="dob" required>
+                            </div>
+
+                            <div class="input-field">
+                                <label>Email</label>
+                                <input type="text" placeholder="Enter your email" name="email">
+                            </div>
+
+                            <div class="input-field">
+                                <label>Mobile Number</label>
+                                <input type="text" placeholder="Enter mobile number" name="phone">
+                            </div>
+
+
+
+
+
+
+
+                            <div class="gender-category">
+                                <label>Gender:</label><br>
+                                <input type="radio" name="gender" id="male" value="male">
+                                <label for="male">Male</label>
+                                <input type="radio" name="gender" id="female" value="female">
+                                <label for="female">Female</label>
+                                <input type="radio" name="gender" id="other" value="other">
+                                <label for="other">Other</label>
+                            </div>
+                            <div class="input-field">
+                                <label>Class</label>
+                                <select name="class">
+                                    <option value="IX">9</option>
+                                    <option value="X">10</option>
+                                    <option value="XI">11</option>
+                                    <option value="XII">12</option>
+                                </select>
+                            </div>
+
+                            <div class="input-field" style="margin-bottom: 32px;">
+                                <label class="lab">Subjects</label>
+                                <select name="subjects" id="countries" multiple>
+                                    <optgroup label="Core Subjects">
+                                        <option value="mathematics">Mathematics</option>
+                                        <option value="science">Science (Physics, Chemistry, Biology)</option>
+                                        <option value="social_studies">Social Studies (History, Geography, Civics)
+                                        </option>
+                                        <option value="english">English</option>
+                                        <option value="hindi">Hindi</option>
+                                        <option value="sanskrit">Sanskrit</option>
+                                        <option value="computer_science">Computer Science</option>
+                                        <option value="physical_education">Physical Education</option>
+                                        <option value="environmental_studies">Environmental Studies (EVS)</option>
+                                        <option value="economics">Economics</option>
+                                        <option value="political_science">Political Science</option>
+                                        <option value="accountancy">Accountancy</option>
+                                        <option value="business_studies">Business Studies</option>
+                                        <option value="psychology">Psychology</option>
+                                        <option value="sociology">Sociology</option>
+                                        <option value="philosophy">Philosophy</option>
+                                        <option value="art_and_craft">Art and Craft</option>
+                                        <option value="music">Music (Vocal and Instrumental)</option>
+                                        <option value="dance">Dance</option>
+                                        <option value="home_science">Home Science</option>
+                                        <option value="legal_studies">Legal Studies</option>
+                                        <option value="entrepreneurship">Entrepreneurship</option>
+                                        <option value="multimedia_and_web_technology">Multimedia and Web Technology
+                                        </option>
+                                        <option value="fashion_studies">Fashion Studies</option>
+                                        <option value="information_technology">Information Technology (IT)</option>
+                                        <option value="physical_education_and_sports">Physical Education and Sports
+                                        </option>
+                                        <option value="engineering_graphics">Engineering Graphics</option>
+                                        <option value="painting">Painting</option>
+                                        <option value="biotechnology">Biotechnology</option>
+                                        <option value="mass_media_studies">Mass Media Studies</option>
+                                        <option value="food_production">Food Production</option>
+                                        <option value="commercial_art">Commercial Art</option>
+                                        <option value="horticulture">Horticulture</option>
+                                        <option value="applied_arts">Applied Arts</option>
+                                        <option value="fashion_design">Fashion Design</option>
+                                        <option value="library_science">Library Science</option>
+                                        <option value="multimedia_and_communication">Multimedia and Communication
+                                        </option>
+                                        <option value="geospatial_technology">Geospatial Technology</option>
+                                        <option value="artificial_intelligence">Artificial Intelligence (AI)</option>
+                                        <option value="astronomy">Astronomy</option>
+                                </select>
+                            </div>
+
+
+
+
+                            <button type="submit">submit ></button>
+
+
+
+
+
+
+
+
+
+
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+    <script>
+        const form = document.querySelector("form"),
+
+
+            allInput = form.querySelectorAll(".first input");
+
+
+        nextBtn.addEventListener("click", () => {
+            allInput.forEach(input => {
+                if (input.value != "") {
+                    form.classList.add('secActive');
+                } else {
+                    form.classList.remove('secActive');
+                }
+            })
+        })
+
+        backBtn.addEventListener("click", () => form.classList.remove('secActive'));
+    </script>
+    <script>
+        // JavaScript to generate dynamic content based on query parameters
+        document.addEventListener("DOMContentLoaded", function () {
+            // Parse query parameters from the URL
+            const urlParams = new URLSearchParams(window.location.search);
+
+            // Check for a "content" parameter in the URL
+            if (urlParams.has("content")) {
+                const contentValue = urlParams.get("content");
+
+                // Display content based on the "content" parameter
+                document.getElementById("dynamic-content").innerText = "Content: " + contentValue;
+            }
+        });
+
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/gh/habibmhamadi/multi-select-tag/dist/js/multi-select-tag.js"></script>
+    <script>
+        new MultiSelectTag('countries')  // id
+    </script>
+</body>
+
+</html>

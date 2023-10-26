@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Responsive Registration Form</title>
+    <meta name="viewport" content="width=device-width,
+      initial-scale=1.0"/>
+      <link rel="icon" href="images\Group.png" type="image/gif" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+   <img src="images/Whooper Academy W text copy.webp" style="margin-left: 6%; width: 17rem;">
+    <div class="container">
+      <h1 class="form-title">School Registration Form</h1>
+      <form action="/registration" method="post">
+        <div class="main-user-info">
+          <div class="user-input-box">
+        
+            <label for="First name">First Name</label>
+            <input type="text"
+                    id="First name"
+                    name="Firstname"
+                    placeholder="Enter First Name" required/>
+          </div>
+          <div class="user-input-box">
+            <label for="Last name">Last Name</label>
+            <input type="text"
+                    id="Last name"
+                    name="Lastname"
+                    placeholder="Enter Last name" required/>
+          </div>
+          <div class="user-input-box">
+            <label for="email">Email</label>
+            <input type="email"
+                    id="email"
+                    name="email"
+                    placeholder="Enter Email" required/>
+          </div>
+          <div class="user-input-box">
+            <label for="phoneNumber">Phone Number</label>
+            <input type="text"
+                    id="phoneNumber"
+                    name="phone"
+                    placeholder="Enter Phone Number" required/>
+          </div>
+          <div class="gender-details-box">
+            <span class="gender-title">Gender</span>
+            <div class="gender-category">
+              <input type="radio" name="gender" id="male" value="male" required>
+              <label for="male">Male</label>
+              <input type="radio" name="gender" id="female" value="female">
+              <label for="female">Female</label>
+              <input type="radio" name="gender" id="other" value="other">
+              <label for="other">Other</label>
+            </div>
+          </div>
+          <div class="user-input-box">
+            <label for="Position">Position</label>
+            <input type="text"
+                    id="Position"
+                    name="Position"
+                    placeholder="Position" required/>
+          </div>
+        
+          <div class="user-input-box">
+            <label for="confirmSchool">School Board</label>
+            <select id="schoolBoard" name="SchoolBoard" required>
+                <option value="cbse"></option>
+                <option value="cbse">Central Board of Secondary Education (CBSE)</option>
+                <option value="icse">Indian Certificate of Secondary Education (ICSE)</option>
+                <option value="stateBoardAndhra">Andhra Pradesh State Board</option>
+                <option value="stateBoardArunachal">Arunachal Pradesh State Board</option>
+                <option value="stateBoardAssam">Assam State Board</option>
+                <option value="stateBoardBihar">Bihar State Board</option>
+                <option value="stateBoardChhattisgarh">Chhattisgarh State Board</option>
+                <option value="stateBoardGoa">Goa State Board</option>
+                <option value="stateBoardGujarat">Gujarat State Board</option>
+                <option value="stateBoardHaryana">Haryana State Board</option>
+                <option value="stateBoardHimachal">Himachal Pradesh State Board</option>
+                <option value="stateBoardJharkhand">Jharkhand State Board</option>
+                <option value="stateBoardKarnataka">Karnataka State Board</option>
+                <option value="stateBoardKerala">Kerala State Board</option>
+                <option value="stateBoardMadhya">Madhya Pradesh State Board</option>
+                <option value="stateBoardMaharashtra">Maharashtra State Board</option>
+                <option value="stateBoardManipur">Manipur State Board</option>
+                <option value="stateBoardMeghalaya">Meghalaya State Board</option>
+                <option value="stateBoardMizoram">Mizoram State Board</option>
+                <option value="stateBoardNagaland">Nagaland State Board</option>
+                <option value="stateBoardOdisha">Odisha State Board</option>
+                <option value="stateBoardPunjab">Punjab State Board</option>
+                <option value="stateBoardRajasthan">Rajasthan State Board</option>
+                <option value="stateBoardSikkim">Sikkim State Board</option>
+                <option value="stateBoardTamilNadu">Tamil Nadu State Board</option>
+                <option value="stateBoardTelangana">Telangana State Board</option>
+                <option value="stateBoardTripura">Tripura State Board</option>
+                <option value="stateBoardUttarPradesh">Uttar Pradesh State Board</option>
+                <option value="stateBoardUttarakhand">Uttarakhand State Board</option>
+                <option value="stateBoardWestBengal">West Bengal State Board</option>
+                
+            </select>
+          </div>
+          <div class="user-input-box">
+            <label for="School">School Name</label>
+            <input type="School"
+                    id="School"
+                    name="School"
+                    placeholder="Enter School" required/>
+          </div>
+        
+          <div class="user-input-box">
+            <label for="address">School Address</label>
+            <input type="text"
+                    id="address"
+                    name="address"
+                    placeholder="Enter School Address" required/>
+          </div>
+          <div class="user-input-box3">
+            <label for="state">Select a State:</label>
+            <select name="state" id="state" onchange="populateCities()">
+
+            </select>
+          </div>
+          <div class="user-input-box">
+            <label for="pincode">Pincode</label>
+            <input type="pincode"
+                    id="pincode"
+                    name="pincode"
+                    placeholder="Enter pincode" required/>
+          </div>
+          <div class="form-submit-btn">
+            <input type="submit" value="Register" onclick="con()">
+          </div>
+         
+          <div class="user-input-box2">
+            <label for="city">Select a City:</label>
+            <select id="city" name="city" >
+          </div>
+        </div>
+        
+
+       
+      </form>
+    </div>
+    <script>
+        
+        function con(){
+          const sub=confirm(" Please confirm to submit the form");
+          return sub;
+        }
+    </script>
+    
+    <script src="city.js"></script>
+  </body>
+</html>
